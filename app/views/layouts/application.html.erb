@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consadole2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      $('.dropdown-toggle').dropdown()
+    </script>
+    <script>
+        $(function(){
+          $('.bxslider').bxSlider({
+            auto: true,
+            slideWidth: 650,
+            minSlides: 3
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

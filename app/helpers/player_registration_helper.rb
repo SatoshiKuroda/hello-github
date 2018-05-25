@@ -1,0 +1,2 @@
+module PlayerRegistrationHelper
+end

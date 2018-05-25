@@ -1,0 +1,34 @@
+<%= link_to  "サインアウト", sign_out_path %>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <nav class="navbar  navbar-default">
+    <div  class="container">
+      <ul class="nav  navbar-nav  ">
+        <li  class="active"><a  href="#">HOME</a></li>
+        <li  class="dropdown">
+          <a href="#"  class="dropdown-toggle" data-toggle="dropdown"  role="button" aria-expanded="false">試合<span  class="caret"></span></a>
+          <ul  class="dropdown-menu" role="menu">
+            <li><a  href="#">試合</a></li>
+            <li><a  href="/player_registration.html">選手一覧</a></li>
+            <li><a  href="#">MUSIC</a></li>
+            <li  class="divider"></li>
+            <li><a  href="#">Separated link</a></li>
+            <li  class="divider"></li>
+            <li><a  href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li><a  href="/player_registration/form.html">選手一覧</a></li>
+        <li><a  href="/player_registration/form.html">登録</a></li>
+        <li><a  href="#">管理</a></li>
+
+      </ul>
+    </div>
+    <div class="bxslider">
+     <%= image_tag '/index.jpg' %>
+    </div>
+        <div class="bxslider">
+     <%= image_tag '/index.jpg' %>
+    </div>
+
+  </nav> 

@@ -1,0 +1,29 @@
+
+    <header>
+      <nav>
+        <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+        <% if user_signed_in? %> 
+          <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+          <!-- *_path はUserモデルを作成したときに、
+          deviseにより自動で作成されてますので、rake routesで確認できます -->
+          
+          <%= link_to '登録内容変更', edit_user_registration_path %> |
+          <%= link_to "ログアウト", sign_out_path %>
+        <% else %>
+          <%= link_to "登録", new_user_registration_path %> |
+          <%= link_to "ログイン", new_user_session_path %>
+        <% end %>
+        <br>
+
+      </nav>
+    </header>
+
+  
+    <% flash.each do |key, value| %>
+      <% key = "info" if key == "notice" %>
+      <% key = "danger"  if key == "alert" %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
