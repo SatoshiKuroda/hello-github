@@ -1,0 +1,19 @@
+%div.container
+  -@players.each do |data|
+    %div.row
+      %div.player_pictuire
+      %div.player_data_head
+        %div.name aaa
+        %div.number　背番号
+        %div.tall 身長
+        %div.weight 体重
+        %div.position ポジション
+      %div.player_data_contents
+        %div.name= content_tag :div, data.name
+        %div.number= content_tag :div, data.number
+        %div.tall= content_tag :div, data.tall
+        %div.weight= content_tag :div, data.weight
+        %div.position= content_tag :div, data.position
+        %button{type:'button',class:"btn-primary"}  Primary
+
+

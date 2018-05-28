@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consadole2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      $('.dropdown-toggle').dropdown()
+    </script>
+
+  </head>
+  <div class="container">
+    <div class="row mx-auto">  <% @players.each do |data| %>
+    
+      <div class="row col-md-3 player">
+        <div class="col-md-6 player_picture">
+          <%= image_tag 'sugeno.jpg', :size => '120x150' %>
+        </div>
+        <div class="col-md-4 player_data_head">
+          <div class="col-sm-name">名前</div>
+          <div class="number">背番号</div>
+          <div class="tall">身長</div>
+          <div class="weight">体重</div>
+          <div class="position">ポジション</div>
+        </div>
+        <div class="col-md-2 player_data_contents">
+          <div class="name"><%= data.name %></div>
+          <div class="number"><%= data.number %></div>
+          <div class="tall"><%= data.tall %></div>
+          <div class="weight"><%= data.weight %></div>
+          <div class="position"><%= data.position %></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+</div>

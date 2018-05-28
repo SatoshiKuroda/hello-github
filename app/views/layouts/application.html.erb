@@ -12,17 +12,11 @@
     <script>
       $('.dropdown-toggle').dropdown()
     </script>
-    <script>
-        $(function(){
-          $('.bxslider').bxSlider({
-            auto: true,
-            slideWidth: 650,
-            minSlides: 3
-          });
-        });
-    </script>
+
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
