@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get   'home/main' 
                
   get   'player_registration/index'
-  get   'player_registration/form'
-  post  'player_registration/upload'
+  post  'player_registration/new'
+  post  'player_registration/create'
   get   'player_registration/download'
 
   get   'player/index'
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :players
+  resources :player_registrations
 
 
   devise_for :users, :controllers => {
