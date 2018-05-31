@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
-  get 'player_registration/index'
-  get 'player_registration/form'
-  post 'player_registration/upload'
-  get 'player_registration/download'
 
-  get 'home/index'             
-  get 'home/main'              
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  
+  get   'home/index'             
+  get   'home/main' 
+            
 
-  root "home#index"
+  root  'home#index'
 
+  resources :players
+  resources :pictures
+  
 
 
   devise_for :users, :controllers => {

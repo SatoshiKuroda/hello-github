@@ -1,0 +1,19 @@
+<h3>選手登録ページ</h3>
+
+<%= form_for @player do |i| %>
+  <%= i.label :name, "名前" %>
+  <%= i.text_field :name %><br>
+  <%= i.label :number, "背番号" %>
+  <%= i.text_field :number %><br>
+  <%= i.label :tall, "身長" %>
+  <%= i.text_field :tall %><br>
+  <%= i.label :weight, "体重" %>
+  <%= i.text_field :weight %><br>
+  <%= i.label :position, "ポジション" %>
+  <%= i.text_field :position %><br>
+  <%= i.fields_for :pictures do |f| %>
+    <%= f.label :file %>
+    <%= f.file_field :file %><br>  
+  <% end %>
+  <%= i.submit "Upload" %>
+<% end %>

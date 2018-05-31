@@ -81,7 +81,8 @@ gem 'devise-i18n-views'
 ####   役割
 #cancancan ユーザー毎に権限
 gem 'cancancan'
-
+#管理画面
+gem 'activeadmin'
 # seed用
 gem 'seed-fu'
 
@@ -105,3 +106,20 @@ gem 'bootstrap_form'
 
 # 論理削除
 gem 'paranoia'
+
+group :development do
+  # エラー画面をわかりやすく整形してくれる
+  gem 'better_errors'
+
+  # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'hirb'         # モデルの出力結果を表形式で表示するGem
+  gem 'hirb-unicode' # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
+
+  gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+  gem 'pry-doc'    # methodを表示
+  gem 'pry-byebug' # デバッグを実施
+end

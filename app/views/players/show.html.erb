@@ -1,0 +1,18 @@
+<h3>詳細画面</h3>
+
+<div>
+  <div>名前</div>
+  <%= @player.name %><br>
+  <div>背番号</div>
+  <%= @player.number %><br>
+  <div>身長</div>
+  <%= @player.tall %><br>
+  <div>体重</div>
+  <%= @player.weight %><br>
+  <div>ポジション</div>
+  <%= @player.position %><br>
+  <%= @playerdata = @player.pictures.build %>
+  <%= @player.pictures %>
+<%= image_tag @player.pictures.to_s %>
+</div>
+
