@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_112157) do
+ActiveRecord::Schema.define(version: 2018_05_31_040440) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 2018_05_29_112157) do
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.string "name"
     t.string "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -64,8 +63,27 @@ ActiveRecord::Schema.define(version: 2018_05_29_112157) do
     t.index ["player_id"], name: "index_pictures_on_player_id"
   end
 
-  create_table "playerrails", force: :cascade do |t|
-    t.string "s"
+  create_table "player_registrations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "playerdata", force: :cascade do |t|
+    t.string "name"
+    t.integer "tall"
+    t.integer "weight"
+    t.string "position"
+    t.string "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "playerinfos", force: :cascade do |t|
+    t.string "name"
+    t.integer "tall"
+    t.integer "weight"
+    t.string "position"
+    t.string "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

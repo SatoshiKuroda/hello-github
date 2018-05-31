@@ -11,7 +11,7 @@
   <%= i.text_field :weight %><br>
   <%= i.label :position, "ポジション" %>
   <%= i.text_field :position %><br>
-  <%= f.fields_for @player do |f| %>
+  <%= i.fields_for :pictures do |f| %>
     <%= f.label :file %>
     <%= f.file_field :file %><br>  
   <% end %>

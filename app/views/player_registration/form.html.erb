@@ -1,12 +1,11 @@
 <h3>選手登録ページ</h3>
-<% @picture = Picture.new %>
-<% @player = Player.new %>
-<%= form_for @picture, :url => {:action => :create} do |f| %>
+
+<%= form_for @picture do |f| %>
   <%= f.label :name, "名前" %>
   <%= f.text_field :name %><br>
   <%= f.label :file %>
   <%= f.file_field :file %><br>
-  <%= f.fields_forform_for @player, :data => {:action => :create} do |i| %>
+  <%= f.fields_for @player do |i| %>
     <%= i.label :number, "背番号" %>
     <%= i.text_field :number %><br>
     <%= i.label :tall, "身長" %>

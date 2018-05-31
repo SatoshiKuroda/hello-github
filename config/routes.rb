@@ -5,18 +5,13 @@ Rails.application.routes.draw do
   
   get   'home/index'             
   get   'home/main' 
-               
-  get   'player_registration/index'
-  post  'player_registration/new'
-  post  'player_registration/create'
-  get   'player_registration/download'
+            
 
-  get   'player/index'
-
-  root "home#index"
+  root  'home#index'
 
   resources :players
-  resources :player_registrations
+  resources :pictures
+  
 
 
   devise_for :users, :controllers => {
